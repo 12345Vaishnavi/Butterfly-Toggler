@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Butterfly Toggler</title>
+
+  <style>
+    body{
+     background-color: #FF9A8B;
+     background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+     min-height: 100vh;
+    }
+   
+   .butterfly_toggler{
+    text-align: center;
+    color: white;
+   }
+
+   .butterfly-container{
+    width:400px;
+    height: 250px;
+    
+    margin: 40px auto;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    padding:20px;
+   }
+
+   .butterfly-img{
+     width: 300px;
+    }
+
+    .btn-container{
+      display: flex;
+      justify-content: center;
+    }
+
+    .butterfly-btn{
+      border: none;
+      border-radius: 30px;
+      padding: 10px 20px; 
+      margin:0 20px;
+      cursor: pointer;
+      box-shadow: 0 0 10px grey;
+      font-size: 15px;
+    }
+
+    .btn-purple{
+        background-color: #c44dff;
+        border: #660099;
+        color: white;
+    }
+
+    .btn-blue{
+      background-color: #1ad1ff; 
+      border: 5px blue; 
+      color: white;
+    }
+
+    .btn-pink{
+      background-color: #ff4d94; 
+      border: palevioletred; 
+      color: white;
+    }
+
+    .butterfly-btn:hover{
+        box-shadow: 3px 3px 20px grey;
+        transition: 0.5s;
+    }
+  </style>
+
+</head>
+<body>
+   
+  <h1 class="butterfly_toggler">Butterfly Toggler</h1>  
+  <div class="butterfly-container">
+   <img src="butterfly-blue.png" class="butterfly-img" id="butterfly"/>
+
+ <!--  <img src="./../images/butterfly-blue.png"/> -->
+  </div>
+  
+  <div class="btn-container">
+    <button type="button" class="butterfly-btn btn-purple" onclick="purpleButterfly()"> Purple Butterfly</button>
+    <button type="button" class="butterfly-btn btn-blue" onclick="blueButterfly()"> Blue Butterfly</button>
+    <button type="button" class="butterfly-btn btn-pink" onclick="pinkButterfly()"> Pink Butterfly</button>
+  </div>
+
+  <script>
+   function purpleButterfly(){
+    const butterflyElement = document.getElementById("butterfly");
+    butterflyElement.src = "butterfly-purple.png";
+   }
+
+   function blueButterfly(){
+    const butterflyElement = document.getElementById("butterfly");
+    butterflyElement.src = "butterfly-blue.png";
+   }
+
+   function pinkButterfly(){
+    const butterflyElement = document.getElementById("butterfly");
+    butterflyElement.src = "butterfly-pink.png";
+   }
+   
+   
+  </script>
+    
+</body>
+</html>
